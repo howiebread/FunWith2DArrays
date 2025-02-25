@@ -16,6 +16,8 @@ class Program
         // Define allowed characters (digits and some special characters).
         string allowedCharacters = "0123456789!@#$%^&*";
         
+        // Create a Random object.
+        Random random = new Random();
         
         for (int row = 0; row < rows; row++)
         {
