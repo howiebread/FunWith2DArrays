@@ -18,12 +18,13 @@ class Program
         
         // Create a Random object.
         Random random = new Random();
-        
+        // Fill the array with random characters.
         for (int row = 0; row < rows; row++)
         {
             for (int column = 0; column < columns; column++)
             {
-                
+                // Randomly select a character from allowedCharacters.
+                array2D[row, column] = allowedCharacters[random.Next(allowedCharacters.Length)];
             }
         }
         // Outputting the 2D Array
