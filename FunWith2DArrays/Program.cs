@@ -14,7 +14,7 @@ class Program
         int[,] array2D = new int [rows, columns];
         
         // Putting info in the array the user inputs.
-        Console.WriteLine("Enter the elements of the array: ");
+        Console.WriteLine("Enter the elements of the array:  Must be a number! ");
         for (int row = 0; row < rows; row++)
         {
             for (int column = 0; column < columns; column++)
@@ -22,6 +22,16 @@ class Program
                 Console.Write($"Element at [{row}, {column}]: ");
                 array2D[row, column] = int.Parse(Console.ReadLine());
             }
+        }
+        // Outputting the 2D Array
+        Console.WriteLine("\nThe elements of the Array are: ");
+        for (int row = 0; row < rows; row++)
+        {
+            for (int column = 0; column < columns; column++)
+            {
+                Console.Write(array2D[row, column] + "\t");
+            }
+            Console.WriteLine();
         }
     }
 
