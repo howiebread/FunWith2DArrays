@@ -27,13 +27,28 @@ class Program
                 array2D[row, column] = allowedCharacters[random.Next(allowedCharacters.Length)];
             }
         }
-        // Outputting the 2D Array
+        // Outputting the 2D Array with a chess board pattern.
         Console.WriteLine("\nThe elements of the Array are: ");
         for (int row = 0; row < rows; row++)
         {
             for (int column = 0; column < columns; column++)
             {
-                Console.Write(array2D[row, column] + "\t");
+                //Determine which color to use.
+                if ((row + column) % 2 == 0)
+                {
+                    Console.BackgroundColor = ConsoleColor.White;
+                    Console.ForegroundColor = ConsoleColor.Black; // This is to ensure text is readable
+                }
+                else
+                {
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                
+                // Print the cell with padding.
+                Console.Write($" {array2D[row, column]}");
+                // Reset default colors after printing each cell.
+                Console.ResetColor();
             }
             Console.WriteLine();
         }
