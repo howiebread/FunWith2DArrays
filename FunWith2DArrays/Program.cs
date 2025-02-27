@@ -29,7 +29,6 @@ class Program
         
         // Print the bottom border.
         PrintBorder(columns);
-
     }
 // Prints a horizontal border line. +---+---+---+
     static void PrintBorder(int columns)
