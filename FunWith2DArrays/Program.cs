@@ -14,7 +14,7 @@ class Program
         rows = int.Parse(Console.ReadLine());
         Console.WriteLine("Enter the number of columns: ");
         columns = int.Parse(Console.ReadLine());
-        Console.WriteLine("Enter mode you want to display grid.  For chessboard press c for indices press i. ");
+        Console.WriteLine($"Enter mode you want to display grid.  For chessboard press {USER_PICKS_CHESSBOARD} for indices press {USER_PICKS_INDICES}. ");
         string userInput = Console.ReadLine();
         while (true)
         {
