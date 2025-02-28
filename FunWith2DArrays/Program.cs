@@ -2,10 +2,11 @@
 
 class Program
 {
+    const string USER_PICKS_CHESSBOARD = "c";
+    const string USER_PICKS_INDICES = "i";
     static int rows;
     static int columns; 
-    static  string userPicksChessBoard = "c";
-    static string userPicksIndices = "i";
+     
 
     static void Main(string[] args)
     {
@@ -17,7 +18,7 @@ class Program
         string userInput = Console.ReadLine();
         while (true)
         {
-            if (userInput == userPicksChessBoard)
+            if (userInput == USER_PICKS_CHESSBOARD)
             {
                 //Declaring 2D Array user selected.
                 char[,] array2D = new char [rows, columns];
@@ -65,7 +66,7 @@ class Program
                 }
                 break;
             }
-            else if (userInput == userPicksIndices)
+            else if (userInput == USER_PICKS_INDICES)
             {
                 // Print the grid
                 for (int row = 0; row < rows; row++)
