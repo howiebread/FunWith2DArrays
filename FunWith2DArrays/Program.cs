@@ -44,7 +44,6 @@ class Program
                 {
                     for (int column = 0; column < columns; column++)
                     {
-                        Console.Write(array2D[row, column] + "\t");
                         //Determine which color to use.
                         if ((row + column) % 2 == 0)
                         {
