@@ -67,17 +67,18 @@ class Program
             }
             else if (userInput == USER_PICKS_INDICES)
             {
-                // Print the grid
-                for (int row = 0; row < rows; row++)
+                string[,] array2D = new string [rows, columns];
+                // Print the grid.
+                 for (int row = 0; row < rows; row++)
                 {
                     // Print the top border.
                     PrintBorder(columns);
                     // Print the row contents.
                     for (int column = 0; column < columns; column++)
                     {
-                        Console.Write($"|{row},{column}");
+                        array2D[row,column] = $"{row},{column}";
+                        Console.Write($"|{array2D[row,column]}");
                     }
-
                     Console.WriteLine("|");
                 }
 
