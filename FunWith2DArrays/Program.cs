@@ -20,7 +20,23 @@ class Program
         {
             if (userInput == USER_PICKS_CHESSBOARD)
             {
-                //Declaring 2D Array user selected.
+                break;
+            }
+            else if (userInput == USER_PICKS_INDICES)
+            {
+
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Wrong input, please try again.");
+                userInput = Console.ReadLine();
+            }
+        }
+
+        if (userInput == USER_PICKS_INDICES)
+        {
+            //Declaring 2D Array user selected.
                 char[,] array2D = new char [rows, columns];
 
                 // Define allowed characters (digits and some special characters).
@@ -63,34 +79,27 @@ class Program
                     }
                     Console.WriteLine();
                 }
-                break;
-            }
-            else if (userInput == USER_PICKS_INDICES)
+        }
+        else
+        {
+            // Create the Array.
+            string[,] array2D = new string [rows, columns];
+            // Print the grid.
+            for (int row = 0; row < rows; row++)
             {
-                string[,] array2D = new string [rows, columns];
-                // Print the grid.
-                 for (int row = 0; row < rows; row++)
-                {
-                    // Print the top border.
-                    PrintBorder(columns);
-                    // Print the row contents.
-                    for (int column = 0; column < columns; column++)
-                    {
-                        array2D[row,column] = $"{row},{column}";
-                        Console.Write($"|{array2D[row,column]}");
-                    }
-                    Console.WriteLine("|");
-                }
-
-                // Print the bottom border.
+                // Print the top border.
                 PrintBorder(columns);
-                break;
+                // Print the row contents.
+                for (int column = 0; column < columns; column++)
+                {
+                    array2D[row,column] = $"{row},{column}";
+                    Console.Write($"|{array2D[row,column]}");
+                }
+                Console.WriteLine("|");
             }
-            else
-            {
-                Console.WriteLine("Wrong input, please try again.");
-                userInput = Console.ReadLine();
-            }
+
+            // Print the bottom border.
+            PrintBorder(columns);
         }
     }
 // Prints a horizontal border line. +---+---+---+
