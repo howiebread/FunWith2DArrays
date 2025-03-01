@@ -34,7 +34,7 @@ class Program
             }
         }
 
-        if (userInput == USER_PICKS_INDICES)
+        if (userInput == USER_PICKS_CHESSBOARD)
         {
             //Declaring 2D Array user selected.
                 char[,] array2D = new char [rows, columns];
