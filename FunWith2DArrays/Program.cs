@@ -2,6 +2,7 @@
 
 class Program
 {
+    const string ALLOWED_CHARACTERS = "0123456789!@#$%^&*";
     const string USER_PICKS_CHESSBOARD = "c";
     const string USER_PICKS_INDICES = "i";
     static int rows;
@@ -40,7 +41,7 @@ class Program
                 char[,] array2D = new char [rows, columns];
 
                 // Define allowed characters (digits and some special characters).
-                string allowedCharacters = "0123456789!@#$%^&*";
+                
 
                 // Create a Random object.
                 Random random = new Random();
@@ -50,7 +51,7 @@ class Program
                     for (int column = 0; column < columns; column++)
                     {
                         // Randomly select a character from allowedCharacters.
-                        array2D[row, column] = allowedCharacters[random.Next(allowedCharacters.Length)];
+                        array2D[row, column] = ALLOWED_CHARACTERS[random.Next(ALLOWED_CHARACTERS.Length)];
                     }
                 }
                 
